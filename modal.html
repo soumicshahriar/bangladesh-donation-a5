@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+
+    <!-- tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@4.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- daysi UI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+ 
+        <!-- The button to open modal -->
+        <button id="modal-btn" class="btn">open modal</button>
+
+        <!-- Put this part before </body> tag -->
+        <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+        <div class="modal" role="dialog">
+            <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">This modal works with a hidden checkbox!</p>
+                <div class="modal-action">
+                    <label for="my_modal_6" class="btn">Close!</label>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('modal-btn').addEventListener('click', function (event) {
+                event.preventDefault();
+                document.getElementById('my_modal_6').checked = true;
+            })
+        </script>
+    
+</body>
+
+</html>

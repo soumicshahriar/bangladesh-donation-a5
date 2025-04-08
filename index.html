@@ -11,45 +11,25 @@
     <!-- daysi UI CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .selected{
+            background-color: #B4F461;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <!-- navbar section -->
-        <div class="navbar bg-[#F9F7F3] shadow-sm">
-            <div class="navbar-start">
-                <div><button class="btn bg-[#B4F461]">Blog</button></div>
-                <!-- <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h7" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Homepage</a></li>
-                        <li><a>Portfolio</a></li>
-                        <li><a>About</a></li>
-                    </ul>
-                </div> -->
-            </div>
-            <div class="navbar-center">
-                <img src="/assets/logo.png" alt="">
-                <a class="btn btn-ghost text-xl">Donate Bangladesh</a>
-            </div>
-            <div class="navbar-end gap-2">
-                <img src="/assets/coin.png" alt="">
-                <p class="font-bold"><span id="donation-storage">5500</span> BDT</p>
-            </div>
-        </div>
-    </header>
-
+    
+    <!-- navbar section -->
+    <div id="navbar"></div>
     <!-- main section for button -->
     <main class="flex justify-center my-8 gap-4">
-        <input id="donation-btn" type="checkbox" aria-label="Donation" class="btn bg-[#B4F461]" />
-        <input id="history-btn" type="checkbox" aria-label="History" class="btn" />
+        <!-- <input id="donation-btn" type="checkbox" aria-label="Donation" class="btn" />
+        <input id="history-btn" type="checkbox" aria-label="History" class="btn" /> -->
+
+        <button id="donation-btn" class="btn" >Donation</button>
+        <button id="history-btn" class="btn">History</button>
     </main>
 
 
@@ -161,7 +141,8 @@
     <!-- added js script -->
     <script src="js/shared.js"></script>
     <script src="js/features.js"></script>
-    <script src="js/index.js"></script>
+
+    <!-- <script src="js/blog.js"></script> -->
 
 </body>
 

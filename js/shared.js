@@ -21,7 +21,40 @@ function updateDonation(id) {
 }
 
 function updateStorage(id) {
-   const donationStorage = document.getElementById('donation-storage');
-   const donationStorageNumber = parseFloat(donationStorage.innerText);
-   return donationStorageNumber;
+    const donationStorage = document.getElementById('donation-storage');
+    const donationStorageNumber = parseFloat(donationStorage.innerText);
+    return donationStorageNumber;
 }
+
+//blog section
+// Load the navbar
+fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+
+        // Now that the navbar is in the DOM, you can safely query it
+        const currentPage = window.location.href.split("/").pop();
+        console.log("Current Page:", currentPage);
+
+        const navLink = document.getElementById('blog-btn');
+        console.log("navLink:", navLink);
+
+        if (navLink) {
+            if (currentPage === "blog.html") {
+                navLink.textContent = "Index";
+                navLink.href = "index.html";
+            } else {
+                navLink.textContent = "Blog";
+                navLink.href = "blog.html";
+            }
+        }
+    });
+
+
+
+
+
+
+
+
